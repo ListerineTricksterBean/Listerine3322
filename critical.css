@@ -1,0 +1,431 @@
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+    #hero {
+      font-family: 'Roboto', 'Arial', sans-serif;
+      /* Centers button */
+      text-align: center;
+      /* changes on tablet */
+      padding: 6.5rem 1rem 5rem 1rem;
+      position: relative;
+      z-index: 1;
+      /* prevents overflow from the lines extending past the screen width */
+      overflow: hidden;
+      background-image: linear-gradient(to right bottom, #00d9ff, #00c5ff, #00aeff, #0095ff, #0077ff);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+    }
+    #hero .cs-container {
+      width: 100%;
+      max-width: 80em;
+      /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
+      /* 144px - 280px - leaving extra space for the navigation */
+      /* changes on tablet */
+      padding: 0px 10px 100px 10px;
+      margin: auto;
+      position: relative;
+    }
+    #hero .cs-flex-group {
+      /* 60px - 220px */
+      margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
+      margin: auto;
+      width: 80vw;
+      /* 464px - 562px */
+      max-width: clamp(29em, 60vw, 35.125em);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+    }
+    #hero .cs-title {
+      /* 39px - 61px */
+      font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+      font-weight: 900;
+      line-height: 1.2em;
+      text-align: center;
+      width: 100%;
+      /* 32px - 40px */
+      margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+      color: var(--bodyTextColorWhite);
+      position: relative;
+      font-family: 'bungee', cursive;
+      padding-top: 1em;
+      text-shadow: 0 1px 0 #ccc,
+                   0 2px 0 #c9c9c9,
+                   0 3px 0 #bbb,
+                   0 4px 0 #b9b9b9,
+                   0 5px 0 #aaa,
+                   0 6px 1px rgba(0,0,0,.1),
+                   0 0 5px rgba(0,0,0,.1),
+                   0 1px 3px rgba(0,0,0,.3),
+                   0 3px 5px rgba(0,0,0,.2),
+                   0 5px 10px rgba(0,0,0,.25),
+                   0 10px 10px rgba(0,0,0,.2),
+                   0 20px 20px rgba(0,0,0,.15);
+    
+    }
+    #hero .cs-text {
+      /* 16px - 20px */
+      font-size: clamp(1rem, 1.95vw, 1.25rem);
+      line-height: 1.5em;
+      text-align: center;
+      width: 100%;
+      /* 32px - 40px */
+      margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+      /* 40px - 48px */
+      margin-bottom: clamp(2.5rem, 4vw, 3rem);
+      color: var(--bodyTextColorWhite);
+    }
+    #hero .cs-button-gradient {
+      text-decoration: none;
+      position: relative;
+      border: none;
+      font-size: 14px;
+      font-family: inherit;
+      color: #fff;
+      width: 9em;
+      height: 3em;
+      line-height: 2em;
+      text-align: center;
+      background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+      background-size: 300%;
+      border-radius: 30px;
+      z-index: 1;
+     }
+     
+     #hero .cs-button-gradient:hover {
+      animation: ani 8s linear infinite;
+      border: none;
+     }
+     
+     @keyframes ani {
+      0% {
+       background-position: 0%;
+      }
+     
+      100% {
+       background-position: 400%;
+      }
+     }
+     
+     #hero .cs-button-gradient:before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      z-index: -1;
+      background-image: linear-gradient(to right,hsl(353, 86%, 54%), hsl(393, 86%, 54%), hsl(380, 86%, 54%) , #EF233C);
+      background-size: 400%;
+      border-radius: 35px;
+      transition: .3s;
+     }
+     
+     #hero .cs-button-gradient:hover::before {
+      filter: blur(50px);
+     }
+     
+     #hero .cs-button-gradient:active {
+      background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+     }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48em) {
+    #hero {
+      /* 32px - 40px */
+      padding: 0 clamp(2em, 5vw, 2.5em);
+    }
+    #hero .cs-container {
+      padding: 70px 10px 100px 10px;
+    }
+    #hero .cs-button-gradient {
+      font-size: 17px;
+     }
+  
+  }
+  /* Desktop Parallax Effect - 1300px */
+  @media only screen and (min-width: 81.25em) {
+    #hero {
+      padding-bottom: 5em;
+      padding-top: 5em;
+    }
+    #hero .cs-title {
+      font-size: 80px;
+    }
+    body.dark-mode #hero::before {
+      content: url(bee-hive.png);
+      position: absolute;
+      height: 360px;
+      z-index: -1;
+      bottom: 0;
+      opacity: .5;
+      right: 0.1%;
+      margin: 0;
+    }
+
+  }
+  /* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #hero {
+    background-image: linear-gradient(to left top, #000930, #001654, #001e7b, #0024a2, #0027c9);
+    transition: background-image 0.5s ease-in-out;
+  }
+  .border-flip--black:before {
+    border: solid 3px #ffffff;
+  }
+  .border-flip--black {
+    color: #ffffff;
+  }
+}
+  /*-- -------------------------- -->
+  <---          Services          -->
+  <--- -------------------------- -*/
+  /* Mobile */
+  @media only screen and (min-width: 0em) {
+  
+    #services {
+      padding: 1em 0.5em 0em 0.5em;
+    }
+    #services .cs-container {
+      padding: 0 10px;
+      margin: auto;
+      position: relative;
+      width: 100%;
+    }
+    #services p {
+margin-bottom: 16px;
+font-family: Cabinetgrotesk, sans-serif;
+color: #000000;
+font-size: 30px;
+font-weight: 700;
+    }
+     #services .graph-paper {
+        background-image: linear-gradient(90deg, rgb(218, 230, 1) 0%, rgb(218, 230, 1) 7%,rgb(226, 203, 7) 7%, rgb(226, 203, 7) 14%,rgb(234, 176, 13) 14%, rgb(234, 176, 13) 21%,rgb(242, 148, 18) 21%, rgb(242, 148, 18) 28%,rgb(250, 121, 24) 28%, rgb(250, 121, 24) 100%);
+        background-size: 100% 18%;
+        background-size:  100% 15%;
+        background-repeat: repeat-x;
+        background-position: left 0% bottom 10%;
+      }
+      .container-span {
+        width: 100%;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      #services .cs-container-s2 .graph-paper {
+        background-image: linear-gradient(90deg, rgb(218, 230, 1) 0%, rgb(218, 230, 1) 7%,rgb(226, 203, 7) 7%, rgb(226, 203, 7) 14%,rgb(234, 176, 13) 14%, rgb(234, 176, 13) 21%,rgb(242, 148, 18) 21%, rgb(242, 148, 18) 28%,rgb(250, 121, 24) 28%, rgb(250, 121, 24) 100%);
+        background-size: 100% 18%;
+        background-repeat: repeat-x;
+        background-position: left 0% bottom 10%;
+        text-align: right;
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+  
+    #services .right span {
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .cs-container-s2 {
+      padding: 5em 0.5em 2em 0.5em;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      flex-flow: column;
+    }
+    .cs-container-s2 .cs-container {
+      padding: 0 10px;
+      margin: auto;
+      position: relative;
+      width: 100%;
+    }
+
+    .cs-container-s2 p {
+font-family: Cabinetgrotesk, sans-serif;
+color: #000000;
+font-size: 30px;
+font-weight: 700;
+text-align: right;
+margin: 0;
+    }
+    #services .br-top {
+      margin-top: 0px;
+      padding-top: 0px;
+    }
+    #services .br-rest {
+      margin-bottom: 20px;
+    }
+    }
+  /* Large Desktop */
+  @media only screen and (min-width: 1300px) {
+    .cs-container-s2 {
+      padding: 10.125em 5em 2.25em 5em;
+    }
+    .cs-container-s2 h2 {
+      font-size: 25px;
+    }
+    .cs-container-s2 p {
+      font-size: 50px;
+    }
+    
+  }
+  /* Large Desktop */
+  @media only screen and (min-width: 1300px) {
+    #services {
+      padding: 3.125em 5em;
+    }
+    #services p {
+      font-size: 50px;
+      animation: fadeIn 1s ease-in both;
+    }
+    #services .right span {
+      font-size: 45px;
+      font-weight: bold;
+      animation: fadeIn 1s ease-in both;
+    }
+    #services .t-underline-1, .t-underline-2, .t-underline-3, .t-underline-4 {
+      text-decoration: none;
+      animation: fadeIn 1s ease-in both;
+    }
+    #services .t-underline-1:before, .t-underline-2:before, .t-underline-3:before, .t-underline-4:before {
+      background:#ff822d;
+    }
+    #services .t-underline-1:before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 4rem;
+      border-radius: 0.1875rem;
+      opacity: 1;
+      z-index: -1;
+      left: 38px;
+      width: 0%;
+      transition: width .3s;
+    }
+    #services .t-underline-2:before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 4rem;
+      border-radius: 0.1875rem;
+      opacity: 1;
+      z-index: -1;
+      left: 38px;
+      width: 0%;
+      transition: width .3s;
+    }
+    #services .t-underline-3:before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 4rem;
+      border-radius: 0.1875rem;
+      opacity: 1;
+      z-index: -1;
+      left: 38px;
+      width: 0%;
+      transition: width .3s;
+    }
+    #services .t-underline-4:before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 4rem;
+      border-radius: 0.1875rem;
+      opacity: 1;
+      z-index: -1;
+      left: 38px;
+      width: 0%;
+      transition: width .3s;
+    }
+    #services .t-underline-1:hover:before {
+      width: 52%;
+    }
+    #services .t-underline-2:hover:before {
+      width: 71%;
+    }
+    #services .t-underline-3:hover:before {
+      width: 61%;
+    }
+    #services .t-underline-4:hover:before {
+      width: 95.9%;
+    }
+    #services .t-underline-1:hover, .t-underline-2:hover, .t-underline-3:hover, .t-underline-4:hover {
+      color: #000000;
+    }
+    @keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+  }
+  @media only screen and (min-width: 1500px) {
+    #services .t-underline-1:hover:before {
+      width: 45%;
+    }
+    #services .t-underline-2:hover:before {
+      width: 61%;
+    }
+    #services .t-underline-3:hover:before {
+      width: 52%;
+    }
+    #services .t-underline-4:hover:before {
+      width: 82.9%;
+    }
+  }
+
+  /* Dark mode */
+  @media only screen and (min-width: 0em) {
+    body.dark-mode #services picture {
+      background: var(--primaryDark);
+    }
+    body.dark-mode #services h2 {
+      color: #fff;
+      font-weight: bold;
+    }
+    body.dark-mode #services p {
+      color: #fff;
+    }
+    body.dark-mode #services .right span {
+      color: #eaeaea;
+    }
+  }
+  /** desktop dark-mode **/
+  @media only screen and (min-width: 1300px) {
+    body.dark-mode #services .t-underline-1:before {
+      background: #ffff00;
+    }
+    body.dark-mode #services .t-underline-2:before {
+      background: #ffff00;
+    }
+    body.dark-mode #services .t-underline-3:before {
+      background: #ffff00;
+    }
+    body.dark-mode #services .t-underline-4:before{
+      background: #ffff00;
+    }
+    body.dark-mode #services .t-underline-1:hover {
+      color: #000;
+    }
+    body.dark-mode #services .t-underline-2:hover {
+      color: #000;
+    }
+    body.dark-mode #services .t-underline-3:hover {
+      color: #000;
+    }
+    body.dark-mode #services .t-underline-4:hover{
+      color: #000;
+    }
+  }
