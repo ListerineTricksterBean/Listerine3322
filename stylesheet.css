@@ -147,7 +147,6 @@
       margin: 0 auto 1rem;
       color: var(--headerColor);
       position: relative;
-      -webkit-text-stroke: #000000 2px;
       color: #fff;
       text-shadow: 0 1px 0 #ccc,
                0 2px 0 #c9c9c9,
@@ -241,7 +240,6 @@
     width: 100%;
     }
     #gallery .yellow-orange {
-      -webkit-text-stroke: #000000 2px;
       color: #fff;
       text-shadow: 0 1px 0 #ccc,
                0 2px 0 #c9c9c9,
